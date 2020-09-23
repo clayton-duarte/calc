@@ -1,10 +1,13 @@
-import styled from 'styled-components'
+import React from "react";
+import { NextPage } from "next";
+import styled from "styled-components";
 
 const Title = styled.h1`
-  color: red;
-  font-size: 50px;
-`
+  color: ${(props) => props.theme.palette.TEXT};
+`;
 
-export default function Home() {
-  return <Title>My page</Title>
-}
+const HomePage: NextPage = () => {
+  return <Title>My page</Title>;
+};
+
+export default HomePage;
